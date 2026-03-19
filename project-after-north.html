@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>After North - Sora Funk</title>
+  <meta name="description" content="After North - Thesis Project short film by Sora Funk." />
+  <link rel="stylesheet" href="styles.css" />
+
+
+
+<style>
+.after-grid{
+  max-width:1200px;
+  margin:0 auto;
+  padding:32px 40px 12px;
+  display:block;
+}
+.after-grid .still-large{
+  margin:0 0 24px;
+}
+.after-grid .still-large img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:18px;
+}
+.after-north-clips-layout{
+  display:block;
+}
+.clip-hero{
+  margin:0 0 24px;
+}
+.clip-hero .gallery-item,
+.clip-card .gallery-item{
+  width:100%;
+}
+.clip-hero img{
+  width:100%;
+  display:block;
+  border-radius:18px;
+  aspect-ratio:16 / 9;
+  object-fit:cover;
+}
+.clip-pairs{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  max-width:900px;
+  margin:0 auto;
+}
+.clip-row{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:20px;
+}
+.clip-card{
+  margin:0;
+}
+.clip-card img{
+  width:100%;
+  display:block;
+  border-radius:18px;
+  aspect-ratio:16 / 9;
+  object-fit:cover;
+}
+.project-process{
+  max-width:1200px;
+  margin:0 auto;
+  padding:28px 40px 64px;
+}
+.project-process h2{
+  margin:0 0 16px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-size:18px;
+}
+.compact-process{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:18px;
+  align-items:start;
+}
+.process-card{
+  margin:0;
+  padding:0;
+}
+.process-media{
+  width:100%;
+  aspect-ratio:16 / 9;
+  overflow:hidden;
+  border-radius:16px;
+  background:#111;
+  box-shadow:0 10px 24px rgba(0,0,0,.12);
+}
+.process-media video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  background:#111;
+}
+.process-title{
+  margin:10px 2px 0;
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+@media (max-width:900px){
+  .after-grid,
+  .project-process{
+    padding-left:18px;
+    padding-right:18px;
+  }
+}
+@media (max-width:720px){
+  .clip-row{
+    grid-template-columns:1fr;
+  }
+}
+
+.story-dev{
+  max-width:1200px;
+  margin:0 auto;
+  padding:24px 40px 80px;
+}
+.story-dev .section-heading{
+  margin-bottom:28px;
+}
+.story-copy{
+  max-width:860px;
+  margin:0 0 28px;
+}
+.story-copy p{
+  margin:0 0 14px;
+  line-height:1.7;
+}
+.story-block + .story-block{
+  margin-top:54px;
+}
+.jump-link{
+  margin:24px 0 0;
+  font-size:15px;
+}
+.jump-link a{
+  text-decoration:none;
+  border-bottom:1px solid currentColor;
+  padding-bottom:2px;
+}
+.story-block h3{
+  margin:0 0 10px;
+  font-size:20px;
+  letter-spacing:.02em;
+}
+.story-block p{
+  max-width:860px;
+  line-height:1.7;
+  margin:0 0 18px;
+}
+.story-grid-two{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+}
+.story-grid-three{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+}
+.story-figure,
+.story-figure-large{
+  margin:0;
+}
+.story-figure img,
+.story-figure-large img{
+  width:100%;
+  display:block;
+  border-radius:18px;
+  box-shadow:0 10px 24px rgba(0,0,0,.10);
+}
+.story-figure figcaption,
+.story-figure-large figcaption{
+  margin:10px 2px 0;
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.story-figure-large{
+  max-width:1200px;
+}
+.story-figure-large img{
+  max-height:none;
+}
+@media (max-width:900px){
+  .story-dev{
+    padding-left:18px;
+    padding-right:18px;
+  }
+  .story-grid-three{
+    grid-template-columns:1fr 1fr;
+  }
+}
+@media (max-width:720px){
+  .story-grid-two,
+  .story-grid-three{
+    grid-template-columns:1fr;
+  }
+}
+
+
+.storyboard-gallery{
+  max-width:1200px;
+  margin:0 auto;
+  padding:24px 40px 100px;
+}
+.storyboard-gallery .section-heading{
+  margin-bottom:28px;
+}
+.storyboard-gallery-copy{
+  max-width:860px;
+  margin:0 0 30px;
+  line-height:1.7;
+}
+.storyboard-row-featured{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+  margin-bottom:22px;
+  align-items:start;
+}
+.storyboard-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:18px;
+  align-items:start;
+}
+.storyboard-card{
+  margin:0;
+}
+.storyboard-card img{
+  width:100%;
+  display:block;
+  border-radius:14px;
+  box-shadow:0 10px 24px rgba(0,0,0,.10);
+}
+.storyboard-card figcaption{
+  margin:8px 2px 0;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+@media (max-width:900px){
+  .storyboard-gallery{
+    padding-left:18px;
+    padding-right:18px;
+  }
+  .storyboard-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+@media (max-width:720px){
+  .storyboard-row-featured,
+  .storyboard-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media (max-width:520px){
+  .storyboard-row-featured,
+  .storyboard-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+</style>
+
+</head>
+<body>
+  <header class="site-header">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="header-inner">
+      <button class="menu-btn" type="button" data-menu-btn aria-controls="mobile-panel" aria-expanded="false">Menu</button>
+      <nav class="nav-left" aria-label="Primary">
+        <a class="nav-link" href="work.html">Work</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="about.html">About Me</a>
+      </nav>
+      <div class="site-title">
+        <a href="index.html" class="nav-link" style="border-bottom:0;padding:10px 0;">SORA FUNK</a>
+      </div>
+      <div class="nav-right" aria-label="Social links">
+        <a class="icon-link" href="https://x.com/sora_purple_man?s=21&t=9sNlO11nTDtzY16gChxAhA" target="_blank" rel="noopener" aria-label="X (opens in new tab)">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.2l-4.9-6.4L6.2 22H2.9l7.3-8.4L1 2h6.3l4.4 5.9L18.9 2zm-1.1 18h1.7L7.1 3.9H5.3L17.8 20z"/></svg>
+        </a>
+        <a class="icon-link" href="https://www.instagram.com/sora.funk/" target="_blank" rel="noopener" aria-label="Instagram (opens in new tab)">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.7 6.1a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"/></svg>
+        </a>
+        <a class="icon-link" href="mailto:genkibean@gmail.com" aria-label="Email">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2v.2l8 5.3 8-5.3V8H4zm16 10V10.6l-7.4 4.9a1 1 0 0 1-1.2 0L4 10.6V18h16z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="mobile-panel" id="mobile-panel" data-mobile-panel hidden>
+      <div class="mobile-inner">
+        <a href="work.html">Work</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About Me</a>
+        <div class="mobile-icons" aria-label="Social links">
+          <a class="icon-link" href="https://x.com/sora_purple_man?s=21&t=9sNlO11nTDtzY16gChxAhA" target="_blank" rel="noopener" aria-label="X (opens in new tab)">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.2l-4.9-6.4L6.2 22H2.9l7.3-8.4L1 2h6.3l4.4 5.9L18.9 2zm-1.1 18h1.7L7.1 3.9H5.3L17.8 20z"/></svg>
+          </a>
+          <a class="icon-link" href="https://www.instagram.com/sora.funk/" target="_blank" rel="noopener" aria-label="Instagram (opens in new tab)">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.7 6.1a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"/></svg>
+          </a>
+          <a class="icon-link" href="mailto:genkibean@gmail.com" aria-label="Email">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2v.2l8 5.3 8-5.3V8H4zm16 10V10.6l-7.4 4.9a1 1 0 0 1-1.2 0L4 10.6V18h16z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="after-north-page">
+    <section class="after-north-intro reveal is-visible" aria-labelledby="title">
+      <div class="after-north-copy">
+        <p class="featured-label">Animation thesis project</p>
+        <h1 id="title" class="featured-title" style="margin-bottom:12px;">After North</h1>
+        <p class="featured-meta">Music: <em>I’ll See You When We’re Both Not So Emotional</em> by American Football</p>
+        
+        <ul class="after-north-summary" aria-label="Project details">
+          <li>Role: Direction, story, animation</li>
+          <li>Software: Clip Studio, Procreate, Procreate Dreams, Adobe After Effects</li>
+          <li>Format: 7 minutes 27 seconds Short film/Music Video</li>
+          <li>Year: 2026</li>
+        </ul>
+<p>In a world where North no longer exists 
+a boy drifts across nameless landscapes.
+
+What guides him, the shadows he follows,
+the light that disappears with time...
+
+each of them becomes a quiet answer,
+drawing him forward
+toward the next step of his journey.</p>
+        <p style="margin-top:18px;">
+          <a href="animation.html" style="text-decoration: underline; text-underline-offset: 4px;">Back to animation</a>
+          &nbsp;·&nbsp;
+          <a href="https://www.youtube.com/watch?v=WI6i_lZtILw" target="_blank" rel="noopener" style="text-decoration: underline; text-underline-offset: 4px;">Watch on YouTube ↗</a>
+        </p>
+      </div>
+      <div class="after-north-video">
+        <div class="yt-poster reveal is-visible" data-youtube="WI6i_lZtILw" data-youtube-title="After North by Sora Funk">
+            <button class="yt-play" type="button" aria-label="Play After North (loads video player)">
+              <span class="yt-play-icon" aria-hidden="true"></span>
+              <span class="yt-play-text">Play</span>
+            </button>
+            <img class="yt-thumb" src="assets/images/after-north-thumb.jpg" srcset="assets/images/after-north-thumb-900.jpg 900w, assets/images/after-north-thumb.jpg 2048w" sizes="(max-width: 900px) 100vw, 46vw" alt="After North film still" loading="lazy">
+            <a class="yt-open" href="https://www.youtube.com/watch?v=WI6i_lZtILw" target="_blank" rel="noopener" aria-label="Watch After North on YouTube (opens in new tab)">Watch on YouTube ↗</a>
+        </div>
+      </div>
+    </section>
+
+    
+<section class="after-north-clips reveal is-visible" aria-labelledby="clips-title">
+  <div class="section-heading" style="margin-bottom:22px;">
+    <p class="home-work-kicker">Selected stills</p>
+    <h2 id="clips-title" class="page-title">Clips from the project</h2>
+    <p class="page-subtitle">A selection of scenes and visual moments from <em>After North</em>.</p>
+  </div>
+
+  <div class="after-north-clips-layout">
+    <figure class="clip-hero">
+      <div class="gallery-item">
+        <img src="assets/images/after-north-clips/after-north-clip-01.jpg" alt="Girl in a white dress turning in an open field." data-lightboxable data-caption="Girl in the field." loading="lazy" />
+      </div>
+    </figure>
+
+    <div class="clip-pairs">
+      <div class="clip-row">
+        <figure class="clip-card"><div class="gallery-item"><img src="assets/images/after-north-clips/after-north-clip-02.jpg" alt="Main character looking upward against a deep blue background." data-lightboxable data-caption="Main character close-up." loading="lazy" /></div></figure>
+        <figure class="clip-card"><div class="gallery-item"><img src="assets/images/after-north-clips/after-north-clip-03.jpg" alt="Character submerged underwater with hands reaching through bubbles." data-lightboxable data-caption="Underwater sequence." loading="lazy" /></div></figure>
+      </div>
+      <div class="clip-row">
+        <figure class="clip-card"><div class="gallery-item"><img src="assets/images/after-north-clips/after-north-clip-04.jpg" alt="Extreme close-up of closed eyes in shadow." data-lightboxable data-caption="Closed-eye close-up." loading="lazy" /></div></figure>
+        <figure class="clip-card"><div class="gallery-item"><img src="assets/images/after-north-clips/after-north-clip-05.jpg" alt="Figure moving along a blue ocean surface from above." data-lightboxable data-caption="Ocean transition shot." loading="lazy" /></div></figure>
+      </div>
+      <div class="clip-row">
+        <figure class="clip-card"><div class="gallery-item"><img src="assets/images/after-north-clips/after-north-clip-06.jpg" alt="Two blood-stained hands raised in front of a pale background." data-lightboxable data-caption="Blood on hands." loading="lazy" /></div></figure>
+        <figure class="clip-card"><div class="gallery-item"><img src="assets/images/after-north-clips/after-north-clip-07.jpg" alt="A wolf-like mouth open in a scream." data-lightboxable data-caption="Wolf transformation detail." loading="lazy" /></div></figure>
+      </div>
+      <div class="clip-row">
+        <figure class="clip-card"><div class="gallery-item"><img src="assets/images/after-north-clips/after-north-clip-08.jpg" alt="Figure in a lemon-shaped hood smoking in a sparse field." data-lightboxable data-caption="Masked figure in the field." loading="lazy" /></div></figure>
+        <figure class="clip-card"><div class="gallery-item"><img src="assets/images/after-north-clips/after-north-clip-09.jpg" alt="Dark wolf standing in a flat bright landscape." data-lightboxable data-caption="Wolf in the landscape." loading="lazy" /></div></figure>
+      </div>
+      <div class="clip-row">
+        <figure class="clip-card"><div class="gallery-item"><img src="assets/images/after-north-clips/after-north-clip-10.jpg" alt="Stylized close-up of brightly colored eyes." data-lightboxable data-caption="Eye motif." loading="lazy" /></div></figure>
+        <figure class="clip-card"><div class="gallery-item"><img src="assets/images/after-north-clips/after-north-clip-11.jpg" alt="Boy standing beside a dark wolf in a sparse field." data-lightboxable data-caption="Boy and wolf final still." loading="lazy" /></div></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="after-north-note reveal is-visible" aria-labelledby="next-title">
+      <p class="home-work-kicker">Animating Process</p>
+      <h2 id="next-title" class="page-title">From storyboard to final animation</h2>
+      <p>I started from a storyboard and used it to build a rough layout for each cut. That layout was then followed by the key animation process, where I added the main movements and defined the overall action.</p>
+      <p>In the final line art stage, I added more layers to smooth the motion and clean up each drawing. The last step was color. Usually I would continue into another program to balance and smooth everything further, but for this project I handled that process at the same time inside Clip Studio.</p>
+      <p>The workflow moved across several programs. I first made the storyboard (絵コンテ) in Procreate, then showed each panel for its decided timing in Procreate Dreams and built the layouts there. Once that was finished, I brought each cut into Clip Studio to finalize the animation, and then connected everything in Adobe After Effects.</p>
+      <p>The videos below show examples of this process in cuts C5 and C28, moving from layout to line art and into the final piece.</p>
+      <p class="jump-link"><a href="#storyboard-gallery">Jump to the storyboard section ↓</a></p>
+    </section>
+  
+
+<section class="project-process" aria-labelledby="process-title">
+  <h2 id="process-title">Process (C5)</h2>
+  <div class="process-grid compact-process">
+    <article class="process-card">
+      <div class="process-media"><video controls preload="metadata" playsinline><source src="assets/media/after-north-process/c5-layout.mp4" type="video/mp4"></video></div>
+      <h3 class="process-title">Layout</h3>
+    </article>
+    <article class="process-card">
+      <div class="process-media"><video controls preload="metadata" playsinline><source src="assets/media/after-north-process/c5-first-sketch.mp4" type="video/mp4"></video></div>
+      <h3 class="process-title">First Sketch</h3>
+    </article>
+    <article class="process-card">
+      <div class="process-media"><video controls preload="metadata" playsinline><source src="assets/media/after-north-process/c5-line-art.mp4" type="video/mp4"></video></div>
+      <h3 class="process-title">Line Art</h3>
+    </article>
+    <article class="process-card">
+      <div class="process-media"><video controls preload="metadata" playsinline><source src="assets/media/after-north-process/c5-final-piece.mp4" type="video/mp4"></video></div>
+      <h3 class="process-title">Final Piece</h3>
+    </article>
+  </div>
+</section>
+
+<section class="project-process">
+  <h2>Process (C28)</h2>
+  <div class="process-grid compact-process">
+    <article class="process-card">
+      <div class="process-media"><video controls preload="metadata" playsinline>
+      <source src="assets/media/after-north-process/c28-layout.mp4" type="video/mp4"></video></div>
+      <h3 class="process-title">Layout</h3>
+    </article>
+
+    <article class="process-card">
+      <div class="process-media"><video controls preload="metadata" playsinline>
+      <source src="assets/media/after-north-process/c28-line-art.mp4" type="video/mp4"></video></div>
+      <h3 class="process-title">Line Art</h3>
+    </article>
+
+    <article class="process-card">
+      <div class="process-media"><video controls preload="metadata" playsinline>
+      <source src="assets/media/after-north-process/c28-final-piece.mp4" type="video/mp4"></video></div>
+      <h3 class="process-title">Final Piece</h3>
+    </article>
+  </div>
+</section>
+
+<section class="story-dev reveal is-visible" aria-labelledby="story-dev-title">
+  <div class="section-heading">
+    <p class="home-work-kicker">Character development</p>
+    <h2 id="story-dev-title" class="page-title">Story, character design, and visual development</h2>
+    <p class="page-subtitle">The material below expands on the characters, the symbolic dog, and the visual thinking that shaped the film’s emotional structure.</p>
+  </div>
+
+  <div class="story-copy">
+    <p>The story centers on a quiet, introverted boy who slowly builds up the courage to confess his feelings to a girl he loves. In the instant he finally tells her, an accident interrupts everything and leaves both of them gravely injured. The boy falls into a coma, while the girl does not survive.</p>
+    <p>The film begins inside the boy’s mental realm, where memory, fear, and grief are transformed into a dream world. A dog appears and guides him forward. This dog is not only a creature within the dream, but a subconscious recreation of the girl herself, trying to lead him back to life.</p>
+    <p>As he follows the dog, the boy slowly understands the truth of what happened. He is then confronted by a deeper part of himself that wants to keep him in a painless world where he never has to face loss. The journey becomes a struggle between emotional retreat and acceptance, ending with his decision to return to reality and continue living without her.</p>
+  </div>
+
+  <div class="story-block">
+    <h3>Character overview</h3>
+    <p>The boy was designed as an inward and restrained character, with posture and expressions that feel guarded, hesitant, and emotionally compressed. The girl was developed as a softer and more open presence, giving the relationship a sense of warmth that lingers even after she is gone. The dog carries that same emotional role into the dream world, becoming a guide shaped by memory, care, and subconscious longing.</p>
+    <div class="story-grid-two">
+      <figure class="story-figure">
+        <img src="assets/images/after-north-story/boy-girl-character-sheet.jpg" alt="Character design sheet showing notes and rough portraits for the boy and girl." data-lightboxable data-caption="Character design sheet for the two leads." loading="lazy" />
+        <figcaption>Initial boy and girl character sheet</figcaption>
+      </figure>
+      <figure class="story-figure">
+        <img src="assets/images/after-north-story/final-concept-painting.jpg" alt="Painted concept image of the boy standing in a pale field." data-lightboxable data-caption="Final concept painting." loading="lazy" />
+        <figcaption>Final concept mood piece</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <h3>Exploring the boy’s personality</h3>
+    <p>These studies focus on expression, gaze, and body language. Rather than pushing the design toward exaggerated acting, the process looks for smaller shifts in mood that support a more introverted lead. The rougher sketches search for vulnerability and tension, while the cleaner studies test how that emotion translates into the final film language.</p>
+    <div class="story-grid-three">
+      <figure class="story-figure">
+        <img src="assets/images/after-north-story/boy-expression-exploration.jpg" alt="Loose painted character explorations of the boy in different poses and facial expressions." data-lightboxable data-caption="Loose expression and pose explorations for the boy." loading="lazy" />
+        <figcaption>Loose emotion and pose studies</figcaption>
+      </figure>
+      <figure class="story-figure">
+        <img src="assets/images/after-north-story/boy-lineart-exploration.jpg" alt="Cleaner line art studies of the boy from multiple angles and expressions." data-lightboxable data-caption="Cleaner line art studies for the boy." loading="lazy" />
+        <figcaption>Refined line-art explorations</figcaption>
+      </figure>
+      <figure class="story-figure">
+        <img src="assets/images/after-north-story/character-notes-sheet.jpg" alt="Character design notes page with written descriptions and portrait sketches of the boy and girl." data-lightboxable data-caption="Written character notes for both leads." loading="lazy" />
+        <figcaption>Written notes and personality breakdowns</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <h3>Costume, staging, and gesture process</h3>
+    <p>The design process then expands into silhouette and staging. Clothing, proportion, and pose studies help define how the characters feel in space, while the broader sketch pages begin testing emotional beats, composition ideas, and scene fragments. Together they bridge character design and narrative planning.</p>
+    <div class="story-grid-two">
+      <figure class="story-figure">
+        <img src="assets/images/after-north-story/pose-costume-studies.jpg" alt="Simple full-body sketches exploring clothing and standing poses for the characters." data-lightboxable data-caption="Costume and pose studies." loading="lazy" />
+        <figcaption>Pose and costume studies</figcaption>
+      </figure>
+      <figure class="story-figure">
+        <img src="assets/images/after-north-story/storyboard-gesture-page.jpg" alt="Large page of loose storyboard and gesture drawings exploring scenes and emotional moments." data-lightboxable data-caption="Gesture drawings and scene fragments." loading="lazy" />
+        <figcaption>Scene fragments and gesture planning</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <h3>Designing the dog as a guide</h3>
+    <p>The dog serves as a guide through the boy’s dream world and functions as a subconscious echo of the girl. These drawings explore a range of expressions, proportions, and levels of realism, searching for a design that feels both protective and uncanny. The final role of the dog is emotional rather than literal: it is a memory trying to pull him back toward life.</p>
+    <div class="story-grid-two">
+      <figure class="story-figure">
+        <img src="assets/images/after-north-story/dog-design-exploration.jpg" alt="Creature design page showing many dog head studies and stylized dog variations." data-lightboxable data-caption="Dog design exploration." loading="lazy" />
+        <figcaption>Dog design exploration</figcaption>
+      </figure>
+      <figure class="story-figure">
+        <img src="assets/images/after-north-story/final-concept-painting.jpg" alt="Concept painting of the boy in the field, representing the dream world mood." data-lightboxable data-caption="Dream-world mood and atmosphere." loading="lazy" />
+        <figcaption>Dream-world atmosphere reference</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <h3>Story process and structure</h3>
+    <p>These larger development boards map the project’s emotional and narrative arc. They connect the confession, the accident, the coma dream, the dog’s guidance, and the eventual confrontation with the part of the boy that wants to stay hidden from grief. The sequence planning shows how the project moved from character sheets and rough sketches into a more cohesive short-film structure.</p>
+    <figure class="story-figure-large">
+      <img src="assets/images/after-north-story/story-structure-board.jpg" alt="Large planning board full of handwritten notes, sketches, arrows, and scene structure ideas for the film." data-lightboxable data-caption="Large story structure board." loading="lazy" />
+      <figcaption>Story structure board</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+<section id="storyboard-gallery" class="storyboard-gallery reveal is-visible" aria-labelledby="storyboard-gallery-title">
+  <div class="section-heading">
+    <p class="home-work-kicker">Storyboard</p>
+    <h2 id="storyboard-gallery-title" class="page-title">Storyboard development</h2>
+    <p class="page-subtitle">The complete storyboard maps the film’s structure, timing, and visual progression from the opening dream logic to the boy’s return to reality.</p>
+  </div>
+
+  <p class="storyboard-gallery-copy">These storyboard sheets were used to build the flow of the film before layout and final animation. The first row highlights the opening pages at a slightly larger scale, with the full sequence continuing below in rows of five.</p>
+
+  <div class="storyboard-row-featured">
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-01.jpg" alt="Storyboard page 1 from After North." data-lightboxable data-caption="Storyboard page 1." loading="lazy" /><figcaption>Page 1</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-02.jpg" alt="Storyboard page 2 from After North." data-lightboxable data-caption="Storyboard page 2." loading="lazy" /><figcaption>Page 2</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-03.jpg" alt="Storyboard page 3 from After North." data-lightboxable data-caption="Storyboard page 3." loading="lazy" /><figcaption>Page 3</figcaption></figure>
+  </div>
+
+  <div class="storyboard-grid">
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-04.jpg" alt="Storyboard page 4 from After North." data-lightboxable data-caption="Storyboard page 4." loading="lazy" /><figcaption>Page 4</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-05.jpg" alt="Storyboard page 5 from After North." data-lightboxable data-caption="Storyboard page 5." loading="lazy" /><figcaption>Page 5</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-06.jpg" alt="Storyboard page 6 from After North." data-lightboxable data-caption="Storyboard page 6." loading="lazy" /><figcaption>Page 6</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-07.jpg" alt="Storyboard page 7 from After North." data-lightboxable data-caption="Storyboard page 7." loading="lazy" /><figcaption>Page 7</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-08.jpg" alt="Storyboard page 8 from After North." data-lightboxable data-caption="Storyboard page 8." loading="lazy" /><figcaption>Page 8</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-09.jpg" alt="Storyboard page 9 from After North." data-lightboxable data-caption="Storyboard page 9." loading="lazy" /><figcaption>Page 9</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-10.jpg" alt="Storyboard page 10 from After North." data-lightboxable data-caption="Storyboard page 10." loading="lazy" /><figcaption>Page 10</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-11.jpg" alt="Storyboard page 11 from After North." data-lightboxable data-caption="Storyboard page 11." loading="lazy" /><figcaption>Page 11</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-12.jpg" alt="Storyboard page 12 from After North." data-lightboxable data-caption="Storyboard page 12." loading="lazy" /><figcaption>Page 12</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-13.jpg" alt="Storyboard page 13 from After North." data-lightboxable data-caption="Storyboard page 13." loading="lazy" /><figcaption>Page 13</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-14.jpg" alt="Storyboard page 14 from After North." data-lightboxable data-caption="Storyboard page 14." loading="lazy" /><figcaption>Page 14</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-15.jpg" alt="Storyboard page 15 from After North." data-lightboxable data-caption="Storyboard page 15." loading="lazy" /><figcaption>Page 15</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-16.jpg" alt="Storyboard page 16 from After North." data-lightboxable data-caption="Storyboard page 16." loading="lazy" /><figcaption>Page 16</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-17.jpg" alt="Storyboard page 17 from After North." data-lightboxable data-caption="Storyboard page 17." loading="lazy" /><figcaption>Page 17</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-18.jpg" alt="Storyboard page 18 from After North." data-lightboxable data-caption="Storyboard page 18." loading="lazy" /><figcaption>Page 18</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-19.jpg" alt="Storyboard page 19 from After North." data-lightboxable data-caption="Storyboard page 19." loading="lazy" /><figcaption>Page 19</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-20.jpg" alt="Storyboard page 20 from After North." data-lightboxable data-caption="Storyboard page 20." loading="lazy" /><figcaption>Page 20</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-21.jpg" alt="Storyboard page 21 from After North." data-lightboxable data-caption="Storyboard page 21." loading="lazy" /><figcaption>Page 21</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-22.jpg" alt="Storyboard page 22 from After North." data-lightboxable data-caption="Storyboard page 22." loading="lazy" /><figcaption>Page 22</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-23.jpg" alt="Storyboard page 23 from After North." data-lightboxable data-caption="Storyboard page 23." loading="lazy" /><figcaption>Page 23</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-24.jpg" alt="Storyboard page 24 from After North." data-lightboxable data-caption="Storyboard page 24." loading="lazy" /><figcaption>Page 24</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-25.jpg" alt="Storyboard page 25 from After North." data-lightboxable data-caption="Storyboard page 25." loading="lazy" /><figcaption>Page 25</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-26.jpg" alt="Storyboard page 26 from After North." data-lightboxable data-caption="Storyboard page 26." loading="lazy" /><figcaption>Page 26</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-27.jpg" alt="Storyboard page 27 from After North." data-lightboxable data-caption="Storyboard page 27." loading="lazy" /><figcaption>Page 27</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-28.jpg" alt="Storyboard page 28 from After North." data-lightboxable data-caption="Storyboard page 28." loading="lazy" /><figcaption>Page 28</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-29.jpg" alt="Storyboard page 29 from After North." data-lightboxable data-caption="Storyboard page 29." loading="lazy" /><figcaption>Page 29</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-30.jpg" alt="Storyboard page 30 from After North." data-lightboxable data-caption="Storyboard page 30." loading="lazy" /><figcaption>Page 30</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-31.jpg" alt="Storyboard page 31 from After North." data-lightboxable data-caption="Storyboard page 31." loading="lazy" /><figcaption>Page 31</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-32.jpg" alt="Storyboard page 32 from After North." data-lightboxable data-caption="Storyboard page 32." loading="lazy" /><figcaption>Page 32</figcaption></figure>
+    <figure class="storyboard-card"><img src="assets/images/after-north-storyboard/storyboard-33.jpg" alt="Storyboard page 33 from After North." data-lightboxable data-caption="Storyboard page 33." loading="lazy" /><figcaption>Page 33</figcaption></figure>
+  </div>
+</section>
+
+<section class="music-credit reveal is-visible" aria-labelledby="music-credit-title">
+  <h2 id="music-credit-title" class="section-title" style="margin-top:0;">Music credit</h2>
+  <div class="music-credit-grid">
+    <div class="music-credit-video">
+      <div class="yt-poster" data-youtube="WtieG0OA8FU" data-youtube-title="American Football - I’ll See You When We’re Both Not So Emotional">
+        <button class="yt-play" type="button" aria-label="Play American Football track on YouTube">
+          <span class="yt-play-icon" aria-hidden="true"></span>
+          <span class="yt-play-text">Play</span>
+        </button>
+        <img class="yt-thumb" src="https://img.youtube.com/vi/WtieG0OA8FU/hqdefault.jpg" alt="American Football video thumbnail" loading="lazy">
+        <a class="yt-open" href="https://www.youtube.com/watch?v=WtieG0OA8FU&list=RDWtieG0OA8FU&start_radio=1" target="_blank" rel="noopener" aria-label="Watch American Football on YouTube">Watch on YouTube ↗</a>
+      </div>
+    </div>
+    <div class="music-credit-copy">
+      <div class="music-credit-band">
+        <div class="music-credit-avatar" aria-hidden="true">AF</div>
+        <div>
+          <p class="music-credit-label">Artist</p>
+          <h3>American Football</h3>
+        </div>
+      </div>
+      <p><em>After North</em> features “I’ll See You When We’re Both Not So Emotional” by American Football. The band’s restrained guitar work and introspective tone aligned closely with the emotional atmosphere I wanted the film to hold.</p>
+      <p>Rather than treating the song as a decorative addition, I used it as a tonal reference for rhythm, quiet tension, and reflection throughout the piece.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="small">© <span id="y"></span> Sora Funk</div>
+      <div class="small"><a href="contact.html">Contact</a></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
